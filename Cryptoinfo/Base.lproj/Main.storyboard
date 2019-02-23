@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vfZ-i2-q3n">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Crypto Info CollectionVC-->
+        <scene sceneID="3Ig-6U-Kc5">
+            <objects>
+                <collectionViewController id="vfZ-i2-q3n" customClass="CryptoInfoCollectionVC" customModule="Cryptoinfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="5nG-Ma-76w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="CIDarkBlue"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EfH-Di-3aQ">
+                            <size key="itemSize" width="179" height="178"/>
+                            <size key="headerReferenceSize" width="50" height="100"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="10" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CoinCell" id="avI-E3-lUN" customClass="CoinCell" customModule="Cryptoinfo" customModuleProvider="target">
+                                <rect key="frame" x="5" y="110" width="179" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="179" height="178"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SYM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1P-k5-5DT">
+                                            <rect key="frame" x="35.5" y="58.5" width="108.5" height="61"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="51"/>
+                                            <color key="textColor" name="CIRed"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jj-GZ-MV0">
+                                            <rect key="frame" x="67" y="32" width="45" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" name="CIRed"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$30.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ii-1T-nHN">
+                                            <rect key="frame" x="67" y="139.5" width="45" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" name="CIRed"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" red="0.16628694534301758" green="0.20070183971156813" blue="0.28236159682273865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="7Ii-1T-nHN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="avI-E3-lUN" secondAttribute="leadingMargin" id="0VH-nv-7cd"/>
+                                    <constraint firstItem="E1P-k5-5DT" firstAttribute="centerY" secondItem="avI-E3-lUN" secondAttribute="centerY" id="3sy-kO-biP"/>
+                                    <constraint firstItem="7Jj-GZ-MV0" firstAttribute="top" secondItem="avI-E3-lUN" secondAttribute="topMargin" constant="4" id="6bd-oY-4H5"/>
+                                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="7Jj-GZ-MV0" secondAttribute="trailing" id="6qM-fP-Ped"/>
+                                    <constraint firstItem="7Ii-1T-nHN" firstAttribute="centerX" secondItem="avI-E3-lUN" secondAttribute="centerX" id="9vD-tZ-RYp"/>
+                                    <constraint firstItem="7Ii-1T-nHN" firstAttribute="top" secondItem="E1P-k5-5DT" secondAttribute="bottom" constant="20" id="Ayl-o8-gAB"/>
+                                    <constraint firstItem="7Jj-GZ-MV0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="avI-E3-lUN" secondAttribute="leadingMargin" id="HV3-0l-1DV"/>
+                                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="E1P-k5-5DT" secondAttribute="trailing" id="LCH-f0-0mC"/>
+                                    <constraint firstItem="E1P-k5-5DT" firstAttribute="centerX" secondItem="avI-E3-lUN" secondAttribute="centerX" id="NB2-mo-8XG"/>
+                                    <constraint firstItem="7Jj-GZ-MV0" firstAttribute="centerX" secondItem="avI-E3-lUN" secondAttribute="centerX" id="U0A-EU-tox"/>
+                                    <constraint firstItem="E1P-k5-5DT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="avI-E3-lUN" secondAttribute="leadingMargin" id="fB2-md-qiy"/>
+                                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="7Ii-1T-nHN" secondAttribute="trailing" id="tJO-vI-XR2"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="7Jj-GZ-MV0" id="LC3-GD-9JT"/>
+                                    <outlet property="priceUSD" destination="7Ii-1T-nHN" id="XbS-Tk-dq5"/>
+                                    <outlet property="symbolLabel" destination="E1P-k5-5DT" id="LOp-jw-acZ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CoinHeader" id="yPs-7h-pg7" customClass="CoinHeader" customModule="Cryptoinfo" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fW-kC-Jjf">
+                                    <rect key="frame" x="74" y="20" width="227" height="60"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                                    <color key="textColor" name="CILightBlue"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="7fW-kC-Jjf" firstAttribute="centerY" secondItem="yPs-7h-pg7" secondAttribute="centerY" id="3E9-XR-982"/>
+                                <constraint firstItem="7fW-kC-Jjf" firstAttribute="centerX" secondItem="yPs-7h-pg7" secondAttribute="centerX" id="neH-lA-o8P"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="titleLabel" destination="7fW-kC-Jjf" id="3OX-AH-KWS"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="vfZ-i2-q3n" id="PJY-0U-fgh"/>
+                            <outlet property="delegate" destination="vfZ-i2-q3n" id="xye-d8-xBW"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yj-rs-sjP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272.80000000000001" y="-165.06746626686657"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="CIDarkBlue">
+            <color red="0.16862745098039217" green="0.2196078431372549" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="CILightBlue">
+            <color red="0.38039215686274508" green="0.66666666666666663" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="CIRed">
+            <color red="0.90588235294117647" green="0.396078431372549" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
